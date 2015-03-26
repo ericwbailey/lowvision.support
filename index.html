@@ -1,71 +1,85 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Content meta -->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Low Vision Simulator</title>
-        <meta name="description" content="Simulates various low vision conditions">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Title and description -->
+        <title>Low Vision Simulator</title>
+        <meta name="description" content="Simulates various low vision conditions">
+
+        <!-- Favicons -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
 
-        <!-- start of #foobar -->
-        <header id="foobar" class="foobar" role="banner">
+        <!-- start of #o-page-header -->
+        <header id="o-page-header" class="o-page-header" role="banner">
 
-            <h1 id="" class="">
+            <h1 id="c-page-title" class="c-page-title">
                 Low Vision Simulator
             </h1>
 
-            <!-- start of #fdhgfjdkfd -->
-            <form id="fdhgfjdkfd" class="fdhgfjdkfd" name="fdhgfjdkfd">
-                <fieldset name="sdfd">
-                    <legend>sdfd</legend>
-                        <label for="sdf">sdf</label>
-                        <input name="sdf" type="" value="" placeholder="">
+            <!-- start of #c-controls -->
+            <form id="c-controls" class="c-controls" name="c-controls">
+                <fieldset name="c-controls--fieldset">
+                    <legend>Please provide a URL and select low vision condition:</legend>
+                        <label class="c-controls--label" for="c-controls--url">URL</label>
+                        <input id="c-controls--url" name="c-controls--url" type="url" placeholder="ex: http://www.google.com/">
 
-                        <!-- start of #selectemp -->
-                        <select id="selectemp" class="selectemp" name="selectemp">
+                        <label for="c-controls--select">Low vision condition</label>
+                        <select id="c-controls--select" name="c-controls--select">
                             <option value="option-macular-degeneration">Macular Degeneration</option>
                             <option value="option-diabetic-retinopathy">Diabetic Retinopathy</option>
                             <option value="option-glaucoma">Glaucoma</option>
                             <option value="option-hemianopia">Hemianopia</option>
                             <option value="option-retinitis-pigmentosa">Retinitis Pigmentosa</option>
                         </select>
-                        <!-- end of #selectemp -->
                 </fieldset>
             </form>
-            <!-- end of #fdhgfjdkfd -->
+            <!-- end of #c-controls -->
 
         </header>
-        <!-- end of #foobar -->
+        <!-- end of #o-page-header -->
 
-        <!-- start of #qux -->
-        <aside id="qux" class="qux" role="complementary">
+        <!-- start of #o-page-aside -->
+        <aside id="o-page-aside" class="o-page-aside" role="complementary">
 
-            <!-- start of #iframetest -->
+            <!-- start of #c-filter -->
+            <div id="c-filter" class="c-filter">
+                <p>
+                    Filter goes here
+                </p>
+            </div>
+            <!-- end of #c-filter -->
+
+            <!-- start of #c-iframe -->
             <iframe
-                id="iframetest"
-                class="iframetest"
-                name="iframetest"
+                id="c-iframe"
+                class="c-iframe"
+                name="c-iframe"
                 src="http://ihighfive.com"
                 seamless
                 sandbox="allow-scripts"
                 height="600"
                 width="800"
             ></iframe>
-            <!-- end of #iframetest -->
+            <!-- end of #c-iframe -->
 
         </aside>
-        <!-- end of #qux -->
+        <!-- end of #o-page-aside -->
 
+        <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/main.js"></script>
 
