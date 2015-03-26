@@ -1,4 +1,6 @@
 ## Project-specific files and folders #########################################
+*.map
+sass/.sass-cache/
 
 
 ## Generic files to ignore ####################################################
