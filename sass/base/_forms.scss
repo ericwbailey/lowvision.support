@@ -1,0 +1,14 @@
+fieldset
+{
+    border: 0;
+}
+
+legend
+{
+    @extend %visuallyhidden;
+}
+
+label
+{
+    display: block;
+}
