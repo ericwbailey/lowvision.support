@@ -1,0 +1,21 @@
+html
+{
+    box-sizing: border-box;
+
+    vertical-align: baseline;
+}
+
+*,
+*:before,
+*:after
+{
+    box-sizing: inherit;
+}
+
+
+body
+{
+    margin: 0;
+
+    background-color: $color-secondary;
+}

@@ -1,3 +1,9 @@
+// Resets iOS styling
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 fieldset
 {
     border: 0;

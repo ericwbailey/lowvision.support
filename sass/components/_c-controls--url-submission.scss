@@ -1,0 +1,71 @@
+.c-controls--url-submission
+{
+//background-color: #FFC48D;
+
+    @extend %bottom-spacer--full;
+    float: left;
+    width: 100%;
+
+    input[name="c-controls--url"]
+    {
+        @extend %bottom-spacer--half;
+        width: 100%;
+        padding: 0.5rem;
+
+        border: 1px solid $color-primary;
+
+        &:hover
+        {
+            border-color: lighten($color-primary, 7%);
+        }
+
+        &:active,
+        &:focus
+        {
+            border-color: darken($color-primary, 10%);
+        }
+
+        @include media(">=34rem") {
+            width: 75%;
+        }
+    }
+
+    button[name="c-controls--submit"]
+    {
+        display: block;
+        padding-top: 0.4rem;
+        padding-bottom: 0.3rem;
+        width: 100%;
+        float: right;
+
+        background-color: $color-primary;
+        border: 0;
+
+        color: #fff;
+
+        &:hover
+        {
+            background-color: lighten($color-primary, 7%);
+        }
+
+        &:active,
+        &:focus
+        {
+            padding-top: 0.5rem;
+            padding-bottom: 0.2rem;
+
+            background-color: darken($color-primary, 10%);
+
+            color: $color-secondary;
+        }
+
+        @include media(">=34rem") {
+            height: 2.3rem;
+            width: 25%;
+        }
+    }
+
+    @include media(">=34rem") {
+        width: 60%;
+   }
+}
