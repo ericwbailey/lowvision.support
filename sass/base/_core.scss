@@ -36,10 +36,16 @@ background-color: #FFC48D;
     order: 1;
     flex: 0 1 auto;
     align-self: stretch;
+    height: 8.25rem;
+
+    @include media(">30rem") {
+        height: 80px;
+    }
 }
 
 #section--website-preview
 {
+background-color: pink;
     order: 2;
     flex: 1 1 auto;
     align-self: stretch;
@@ -51,4 +57,5 @@ background-color: #E8FF8C;
     order: 3;
     flex: 0 1 auto;
     align-self: stretch;
+    height: 5rem;
 }

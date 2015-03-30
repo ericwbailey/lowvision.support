@@ -473,9 +473,16 @@ body {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
+  height: 8.25rem;
+}
+@media (min-width: 30.1rem) {
+  #section--enter-a-url {
+    height: 80px;
+  }
 }
 
 #section--website-preview {
+  background-color: pink;
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
@@ -502,6 +509,7 @@ body {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
+  height: 5rem;
 }
 
 input {
@@ -543,6 +551,12 @@ input[name="c-controls--url"]:hover {
 input[name="c-controls--url"]:active, input[name="c-controls--url"]:focus {
   border-color: #00060c;
 }
+@media (min-width: 30.1rem) {
+  input[name="c-controls--url"] {
+    padding-right: 7.5rem;
+    width: 100%;
+  }
+}
 
 button[name="c-controls--submit"] {
   display: block;
@@ -563,15 +577,24 @@ button[name="c-controls--submit"]:active, button[name="c-controls--submit"]:focu
   background-color: #00060c;
   color: #DDDDDD;
 }
+@media (min-width: 30.1rem) {
+  button[name="c-controls--submit"] {
+    height: 2.75rem;
+    position: relative;
+    top: -52px;
+    right: 0;
+    width: 7rem;
+    z-index: 100;
+  }
+}
 
 select[name="c-controls--condition"] {
   width: 100%;
-  height: 2.2rem;
+  height: 2.1rem;
   border-color: #001F3F;
 }
 
 .c-website-viewer {
-  background-color: #fff;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;

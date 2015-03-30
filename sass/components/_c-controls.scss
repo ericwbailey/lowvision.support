@@ -16,6 +16,11 @@ input[name="c-controls--url"]
     {
         border-color: darken($color-primary, 10%);
     }
+
+    @include media(">30rem") {
+        padding-right: 7.5rem;
+        width: 100%;
+    }
 }
 
 button[name="c-controls--submit"]
@@ -46,12 +51,21 @@ button[name="c-controls--submit"]
 
         color: $color-secondary;
     }
+
+    @include media(">30rem") {
+        height: 2.75rem;
+        position: relative;
+          top: -52px;
+          right: 0;
+        width: 7rem;
+        z-index: 100;
+    }
 }
 
 select[name="c-controls--condition"]
 {
     width: 100%;
-    height: 2.2rem;
+    height: 2.1rem;
 
     border-color: $color-primary;
 }
