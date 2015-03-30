@@ -11,11 +11,9 @@
 @import 'base/typography';
 
 // Layout
-@import 'layout/o-page-header';
-@import 'layout/o-page-aside';
+@import 'layout/o-page-title';
+@import 'layout/o-page-section';
 
 // Components
 @import 'components/c-controls';
-@import 'components/c-controls--url-submission';
-@import 'components/c-controls--low-vision-submission';
 @import 'components/c-website-viewer';

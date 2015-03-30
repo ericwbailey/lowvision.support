@@ -17,4 +17,11 @@ legend
 label
 {
     display: block;
+
+    font-size: 11pt;
+}
+
+select
+{
+    -webkit-appearance: menulist-button;
 }

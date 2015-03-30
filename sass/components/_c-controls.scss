@@ -1,4 +1,57 @@
-.c-controls
+input[name="c-controls--url"]
 {
-    font-size: 11pt;
+    @extend %bottom-spacer--half;
+    width: 100%;
+    padding: 0.5rem;
+
+    border: 1px solid $color-primary;
+
+    &:hover
+    {
+        border-color: lighten($color-primary, 7%);
+    }
+
+    &:active,
+    &:focus
+    {
+        border-color: darken($color-primary, 10%);
+    }
+}
+
+button[name="c-controls--submit"]
+{
+    display: block;
+    padding-top: 0.3rem;
+    padding-bottom: 0.4rem;
+    width: 100%;
+    float: right;
+
+    background-color: $color-primary;
+    border: 0;
+
+    color: #fff;
+
+    &:hover
+    {
+        background-color: lighten($color-primary, 7%);
+    }
+
+    &:active,
+    &:focus
+    {
+        padding-top: 0.5rem;
+        padding-bottom: 0.2rem;
+
+        background-color: darken($color-primary, 10%);
+
+        color: $color-secondary;
+    }
+}
+
+select[name="c-controls--condition"]
+{
+    width: 100%;
+    height: 2.2rem;
+
+    border-color: $color-primary;
 }

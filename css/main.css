@@ -393,7 +393,7 @@ th {
   padding: 0;
 }
 
-legend, .o-page-header .o-page-header--title, .o-page-aside .o-page-aside--title {
+legend, .o-page-title, .o-page-section--title {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -404,7 +404,7 @@ legend, .o-page-header .o-page-header--title, .o-page-aside .o-page-aside--title
   width: 1px;
 }
 
-legend.focusable:active, .o-page-header .focusable.o-page-header--title:active, .o-page-aside .focusable.o-page-aside--title:active, .visuallyhidden.focusable:focus {
+legend.focusable:active, .focusable.o-page-title:active, .focusable.o-page-section--title:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -413,15 +413,13 @@ legend.focusable:active, .o-page-header .focusable.o-page-header--title:active, 
   width: auto;
 }
 
-.c-controls--url-submission, .c-controls--low-vision-submission {
-  margin-bottom: 1rem;
-}
-
-.c-controls--url-submission input[name="c-controls--url"] {
+input[name="c-controls--url"] {
   margin-bottom: 0.5rem;
 }
 
 html {
+  height: 100%;
+  width: 100%;
   box-sizing: border-box;
   vertical-align: baseline;
 }
@@ -433,8 +431,77 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
+  width: 100%;
   background-color: #DDDDDD;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section--enter-a-url {
+  background-color: #FFC48D;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+}
+
+#section--website-preview {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+}
+
+#section--low-vision-condition {
+  background-color: #E8FF8C;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
 }
 
 input {
@@ -448,6 +515,11 @@ fieldset {
 
 label {
   display: block;
+  font-size: 11pt;
+}
+
+select {
+  -webkit-appearance: menulist-button;
 }
 
 body {
@@ -460,76 +532,42 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.c-controls {
-  font-size: 11pt;
-}
-
-.c-controls--url-submission {
-  float: left;
-  width: 100%;
-}
-.c-controls--url-submission input[name="c-controls--url"] {
+input[name="c-controls--url"] {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #001F3F;
 }
-.c-controls--url-submission input[name="c-controls--url"]:hover {
+input[name="c-controls--url"]:hover {
   border-color: #003163;
 }
-.c-controls--url-submission input[name="c-controls--url"]:active, .c-controls--url-submission input[name="c-controls--url"]:focus {
+input[name="c-controls--url"]:active, input[name="c-controls--url"]:focus {
   border-color: #00060c;
 }
-@media (min-width: 34rem) {
-  .c-controls--url-submission input[name="c-controls--url"] {
-    width: 75%;
-  }
-}
-.c-controls--url-submission button[name="c-controls--submit"] {
+
+button[name="c-controls--submit"] {
   display: block;
-  padding-top: 0.4rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.4rem;
   width: 100%;
   float: right;
   background-color: #001F3F;
   border: 0;
   color: #fff;
 }
-.c-controls--url-submission button[name="c-controls--submit"]:hover {
+button[name="c-controls--submit"]:hover {
   background-color: #003163;
 }
-.c-controls--url-submission button[name="c-controls--submit"]:active, .c-controls--url-submission button[name="c-controls--submit"]:focus {
+button[name="c-controls--submit"]:active, button[name="c-controls--submit"]:focus {
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;
   background-color: #00060c;
   color: #DDDDDD;
 }
-@media (min-width: 34rem) {
-  .c-controls--url-submission button[name="c-controls--submit"] {
-    height: 2.3rem;
-    width: 25%;
-  }
-}
-@media (min-width: 34rem) {
-  .c-controls--url-submission {
-    width: 60%;
-  }
-}
 
-.c-controls--low-vision-submission {
-  float: left;
-  width: 100%;
-}
-.c-controls--low-vision-submission select[name="c-controls--select"] {
+select[name="c-controls--condition"] {
   width: 100%;
   height: 2.2rem;
-  -webkit-appearance: menulist-button;
   border-color: #001F3F;
-}
-@media (min-width: 34rem) {
-  .c-controls--low-vision-submission {
-    float: right;
-    width: 37%;
-  }
 }
 
 .c-website-viewer {

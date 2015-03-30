@@ -1,7 +1,8 @@
 html
 {
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
-
     vertical-align: baseline;
 }
 
@@ -15,7 +16,39 @@ html
 
 body
 {
+    height: 100%;
     margin: 0;
+    width: 100%;
 
     background-color: $color-secondary;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+#section--enter-a-url
+{
+background-color: #FFC48D;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+#section--website-preview
+{
+    order: 2;
+    flex: 1 1 auto;
+    align-self: stretch;
+}
+
+#section--low-vision-condition
+{
+background-color: #E8FF8C;
+    order: 3;
+    flex: 0 1 auto;
+    align-self: stretch;
 }

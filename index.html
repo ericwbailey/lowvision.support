@@ -22,52 +22,34 @@
     </head>
     <body>
 
-        <!-- start of #o-page-header -->
-        <header id="o-page-header" class="o-page-header" role="banner">
+        <h1 id="title--low-vision-simulator" class="o-page-title">
+            Low Vision Simulator
+        </h1>
 
-            <h1 id="o-page-header--title" class="o-page-header--title">
-                Low Vision Simulator
-            </h1>
-
-            <!-- start of #c-controls -->
+        <!-- start of #section~~enter-a-url -->
+        <section id="section--enter-a-url" class="o-page-section" role="region">
+            <h2 id="subtitle--enter-a-url" class="o-page-section--title">
+                Enter a URL
+            </h2>
             <form id="c-controls" class="c-controls" name="c-controls">
                 <fieldset name="c-controls--fieldset">
-                    <legend class="c-controls--legend">Please provide a URL and select low vision condition:</legend>
-                        <div class="c-controls--url-submission">
-                            <label class="c-controls--label" for="c-controls--url">URL</label>
-                            <input id="c-controls--url" name="c-controls--url" type="url" placeholder="ex: google.com">
-                            <button name="c-controls--submit" type="submit">View</button>
-                        </div>
-                        <div class="c-controls--low-vision-submission">
-                            <label for="c-controls--select">Low vision condition</label>
-                            <select id="c-controls--select" name="c-controls--select">
-                                <option value="option-none" selected>None</option>
-                                <option value="option-macular-degeneration">Macular Degeneration</option>
-                                <option value="option-diabetic-retinopathy">Diabetic Retinopathy</option>
-                                <option value="option-glaucoma">Glaucoma</option>
-                                <option value="option-hemianopia">Hemianopia</option>
-                                <option value="option-retinitis-pigmentosa">Retinitis Pigmentosa</option>
-                            </select>
-                        </div>
+                    <label class="c-controls--label" for="c-controls--url">URL</label>
+                    <input id="c-controls--url" name="c-controls--url" type="url" placeholder="ex: google.com">
+                    <button name="c-controls--submit" type="submit">View</button>
                 </fieldset>
             </form>
-            <!-- end of #c-controls -->
+        </section>
+        <!-- end of #section~~enter-a-url -->
 
-        </header>
-        <!-- end of #o-page-header -->
-
-        <!-- start of #o-page-aside -->
-        <aside id="o-page-aside" class="o-page-aside" role="complementary">
-
-            <h1 id="o-page-aside--title" class="o-page-aside--title">
+        <!-- start of #section~~website-preview -->
+        <section id="section--website-preview" class="o-page-section" role="region">
+            <h2 id="subtitle--website-preview" class="o-page-section--title">
                 Website Preview
-            </h1>
-
+            </h2>
             <!-- start of #c-website-filter -->
             <div id="c-website-filter" class="c-website-filter" aria-live="polite">
             </div>
             <!-- end of #c-website-filter -->
-
             <!-- start of #c-website-viewer -->
             <div id="c-website-viewer" class="c-website-viewer">
                 <iframe
@@ -81,9 +63,27 @@
                 ></iframe>
             </div>
             <!-- end of #c-website-viewer -->
+        </section>
+        <!-- end of #section~~website-preview -->
 
-        </aside>
-        <!-- end of #o-page-aside -->
+        <!-- start of #section~~low-vision-condition -->
+        <section id="section--low-vision-condition" class="o-page-section" role="region">
+            <h2 id="subtitle--select-a-low-vision-condition" class="o-page-section--title">
+                Select a Low Vision condition
+            </h2>
+            <fieldset name="c-controls--fieldset">
+                <label class="c-controls--label" for="c-controls--condition" form="c-controls">Low vision condition</label>
+                <select id="c-controls--condition" name="c-controls--condition" form="c-controls">
+                    <option value="option-none" selected>None</option>
+                    <option value="option-macular-degeneration">Macular Degeneration</option>
+                    <option value="option-diabetic-retinopathy">Diabetic Retinopathy</option>
+                    <option value="option-glaucoma">Glaucoma</option>
+                    <option value="option-hemianopia">Hemianopia</option>
+                    <option value="option-retinitis-pigmentosa">Retinitis Pigmentosa</option>
+                </select>
+            </fieldset>
+        </section>
+        <!-- end of #section~~low-vision-condition -->
 
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
