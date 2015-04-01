@@ -4,5 +4,5 @@ This is an attempt to simulate viewing the web with various low vision disabilit
 
 
 ## Todo
-- [ ] Add Font
+- [x] Add Font
 - [ ] Add Google Analytics
