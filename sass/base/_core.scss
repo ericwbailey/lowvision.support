@@ -1,8 +1,8 @@
 html
 {
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
     vertical-align: baseline;
 }
 
@@ -22,40 +22,11 @@ body
 
     background-color: $color-secondary;
 
+    // Sets the body as the flex container
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: stretch;
     align-items: center;
-}
-
-#section--enter-a-url
-{
-background-color: #FFC48D;
-    order: 1;
-    flex: 0 1 auto;
-    align-self: stretch;
-    height: 8.25rem;
-
-    @include media(">30rem") {
-        height: 80px;
-    }
-}
-
-#section--website-preview
-{
-background-color: pink;
-    order: 2;
-    flex: 1 1 auto;
-    align-self: stretch;
-}
-
-#section--low-vision-condition
-{
-background-color: #E8FF8C;
-    order: 3;
-    flex: 0 1 auto;
-    align-self: stretch;
-    height: 5rem;
 }

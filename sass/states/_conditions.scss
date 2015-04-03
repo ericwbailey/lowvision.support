@@ -1,0 +1,42 @@
+.has-farsighted
+{
+    -webkit-filter: blur(6px);
+}
+
+.has-monochromacy
+{
+    -webkit-filter: grayscale(1);
+}
+
+.has-macular-degeneration
+{
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%, rgba(255,255,255,0) 50%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(20%,rgba(0,0,0,1)), color-stop(50%,rgba(255,255,255,0)));
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 50%);
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 50%);
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 50%);
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,1) 20%,rgba(255,255,255,0) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 );
+}
+
+.has-hemianopia
+{
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(0,0,0,1) 65%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(65%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 );
+}
+
+.has-retinitis-pigmentosa
+{
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%, rgba(0,0,0,1) 65%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0)), color-stop(65%,rgba(0,0,0,1)));
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0) 0%,rgba(0,0,0,1) 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 );
+}

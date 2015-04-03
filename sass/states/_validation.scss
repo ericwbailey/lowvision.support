@@ -1,0 +1,20 @@
+.js-form-error--label
+{
+    color: $color-error;
+
+    transition: color 100ms ease;
+}
+
+.js-form-error--field
+{
+    border-color: $color-error !important;
+
+    transition: color 100ms ease;
+}
+
+.js-form-error--button
+{
+    background-color: $color-error !important;
+
+    transition: color 100ms ease;
+}

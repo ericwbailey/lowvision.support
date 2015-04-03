@@ -1,20 +1,25 @@
 input[name="c-controls--url"]
 {
     @extend %bottom-spacer--half;
-    width: 100%;
+
     padding: 0.5rem;
+    width: 100%;
 
     border: 1px solid $color-primary;
 
     &:hover
     {
         border-color: lighten($color-primary, 7%);
+
+        transition: background 200ms ease-in-out;
     }
 
     &:active,
     &:focus
     {
         border-color: darken($color-primary, 10%);
+
+        transition: none;
     }
 
     @include media(">30rem") {
@@ -36,13 +41,15 @@ button[name="c-controls--submit"]
 
     color: #fff;
 
-    &:hover
+    transition: background 200ms ease-in-out;
+
+    &:hover,
+    &:focus
     {
         background-color: lighten($color-primary, 7%);
     }
 
-    &:active,
-    &:focus
+    &:active
     {
         padding-top: 0.5rem;
         padding-bottom: 0.2rem;
@@ -50,6 +57,8 @@ button[name="c-controls--submit"]
         background-color: darken($color-primary, 10%);
 
         color: $color-secondary;
+
+        transition: none;
     }
 
     @include media(">30rem") {
@@ -68,4 +77,8 @@ select[name="c-controls--condition"]
     height: 2.1rem;
 
     border-color: $color-primary;
+
+    @include media(">50rem") {
+        height: 2.75rem;
+    }
 }

@@ -1,0 +1,50 @@
+#section--enter-a-url
+{
+//background-color: #FFC48D;
+    height: 8.25rem;
+
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+
+    @include media(">30rem") {
+        height: 5rem;
+    }
+
+    @include media(">50rem") {
+        width: 60%;
+    }
+}
+
+#section--website-preview
+{
+//background-color: wheat;
+    order: 2;
+    flex: 1 1 auto;
+    align-self: stretch;
+
+    @include media(">50rem") {
+        order: 3;
+    }
+}
+
+#section--low-vision-condition
+{
+//background-color: #E8FF8C;
+    height: 5rem;
+
+    order: 3;
+    flex: 0 1 auto;
+    align-self: stretch;
+
+    @include media(">50rem") {
+        order: 2;
+    }
+
+    @include media(">50rem") {
+        position: relative;
+          top: -5rem;
+          left: 60%;
+        width: 40%;
+    }
+}

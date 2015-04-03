@@ -20,6 +20,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/main.css">
     </head>
+
     <body>
 
         <h1 id="title--low-vision-simulator" class="o-page-title">
@@ -31,10 +32,10 @@
             <h2 id="subtitle--enter-a-url" class="o-page-section--title">
                 Enter a URL
             </h2>
-            <form id="c-controls" class="c-controls" name="c-controls">
+            <form id="c-controls" class="c-controls" name="c-controls" novalidate>
                 <fieldset name="c-controls--fieldset">
                     <label class="c-controls--label" for="c-controls--url">Website URL</label>
-                    <input id="c-controls--url" name="c-controls--url" type="url" placeholder="ex: webaim.org">
+                    <input id="c-controls--url" name="c-controls--url" type="url" spellcheck="false" placeholder="ex: webaim.org">
                     <button name="c-controls--submit" type="submit">View</button>
                 </fieldset>
             </form>
@@ -50,6 +51,7 @@
                 <label class="c-controls--label" for="c-controls--condition" form="c-controls">Low vision condition</label>
                 <select id="c-controls--condition" name="c-controls--condition" form="c-controls">
                     <option value="option-none" selected>None</option>
+                    <option value="option-achromatopsia">Achromatopsia (Monochromatic color blindness)</option>
                     <option value="option-macular-degeneration">Macular Degeneration</option>
                     <option value="option-diabetic-retinopathy">Diabetic Retinopathy</option>
                     <option value="option-glaucoma">Glaucoma</option>
@@ -65,24 +67,31 @@
             <h2 id="subtitle--website-preview" class="o-page-section--title">
                 Website Preview
             </h2>
-            <!-- start of #c-website-viewer -->
-            <div id="c-website-viewer" class="c-website-viewer">
-                <iframe
-                    id="c-website-viewer--iframe"
-                    class="c-website-viewer--iframe"
-                    name="c-website-viewer--iframe"
-                    src="http://webaim.org/"
-                    seamless
-                    sandbox="allow-scripts"
-                    aria-live="polite"
-                ></iframe>
-            </div>
-            <!-- end of #c-website-viewer -->
+            <iframe
+                id="c-website-viewer--iframe"
+                class="c-website-viewer--iframe"
+                name="c-website-viewer--iframe"
+                src=""
+                seamless
+                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                aria-live="polite"
+            ></iframe>
+            <!-- start of #instructions -->
+            <aside id="instructions" class="instructions" role="complementary">
+                <h3>
+                    Instructions
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet
+                </p>
+            </aside>
+            <!-- end of #instructions -->
         </section>
         <!-- end of #section~~website-preview -->
 
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/is.min.js"></script>
         <script src="js/main.js"></script>
 
     </body>
