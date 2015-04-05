@@ -10,6 +10,11 @@
     border-color: $color-error !important;
 
     transition: color 100ms ease;
+
+    &:hover
+    {
+        border-color: darken($color-error, 14%);
+    }
 }
 
 .js-form-error--button
@@ -17,4 +22,16 @@
     background-color: $color-error !important;
 
     transition: color 100ms ease;
+
+    &:hover,
+    &:focus
+    {
+        background-color: darken($color-error, 21%) !important;
+    }
+
+    &:active
+    {
+        background-color: darken($color-error, 35%) !important;
+    }
+
 }

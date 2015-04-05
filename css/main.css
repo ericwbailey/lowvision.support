@@ -1,3 +1,33 @@
+@charset "UTF-8";
+legend, .o-page-title, .o-page-section--title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+legend.focusable:active, .focusable.o-page-title:active, .focusable.o-page-section--title:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+input[name="c-controls--url"] {
+  margin-bottom: 0.5rem;
+}
+
+.has-none, .has-protanopia, .has-deuteranopia, .has-tritanopia, .has-monochromacy, .has-cataracts, .has-hemianopia {
+  background-color: white;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -393,31 +423,221 @@ th {
   padding: 0;
 }
 
-legend, .o-page-title, .o-page-section--title {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
+/*
+ *  Remodal - v0.6.3
+ *  Flat, responsive, lightweight, easy customizable modal window plugin with declarative state notation and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+/* ==========================================================================
+   Remodal necessary styles
+   ========================================================================== */
+/* Hide scroll bar */
+html.remodal-is-locked {
   overflow: hidden;
+}
+
+/* Anti FOUC */
+.remodal,
+[data-remodal-id] {
+  visibility: hidden;
+}
+
+/* Necessary styles of the overlay */
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-transform: translateZ(0px);
+}
+
+/* Necessary styles of the modal dialog */
+.remodal {
+  position: relative;
+  display: inline-block;
+}
+
+/* Anti-zoom. Font-size should be >= 16px. */
+.remodal select,
+.remodal textarea,
+.remodal input,
+.remodal select:focus,
+.remodal textarea:focus,
+.remodal input:focus {
+  font-size: 16px;
+}
+
+/* ==========================================================================
+   Remodal default theme
+   ========================================================================== */
+/* Background for effects */
+.remodal-bg {
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: filter 0.2s ease-out;
+}
+
+body.remodal-is-active .remodal-bg {
+  -webkit-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+.remodal-overlay {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+  background: rgba(33, 36, 46, 0.95);
+}
+
+body.remodal-is-active .remodal-overlay {
+  opacity: 1;
+}
+
+/* Default theme styles of the modal dialog */
+.remodal {
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 90%;
+  min-height: 92%;
   padding: 0;
+  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0;
+  color: #001F3F;
+  background: #fff;
+  background-clip: padding-box;
+}
+
+body.remodal-is-active .remodal {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Vertical align of the modal dialog */
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+.remodal-close {
   position: absolute;
-  width: 1px;
+  top: 5px;
+  right: 5px;
+  border-bottom: none;
+  width: 28px;
+  height: 28px;
+  -webkit-transition: background 0.2s ease-out;
+          transition: background 0.2s ease-out;
+  text-decoration: none;
 }
 
-legend.focusable:active, .focusable.o-page-title:active, .focusable.o-page-section--title:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
+.remodal-close:after {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+  display: block;
+  content: "×";
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: #001F3F;
 }
 
-input[name="c-controls--url"] {
-  margin-bottom: 0.5rem;
+.remodal-close:hover,
+.remodal-close:active {
+  color: #003163;
 }
 
+.remodal-close:hover.remodal-close:after,
+.remodal-close:focus.remodal-close:after {
+  color: #003163;
+}
+
+.remodal-close:active.remodal-close:after {
+  color: #00060c;
+}
+
+/* Media queries
+   ========================================================================== */
+@media only screen and (min-width: 40.063em) {
+  .remodal {
+    max-width: 700px;
+    min-height: 0;
+    margin: 20px auto;
+  }
+}
+/* IE8
+   ========================================================================== */
+.lt-ie9 .remodal-overlay {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F021242E, endColorstr=#F021242E);
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+  min-height: 0;
+  margin: 20px auto;
+}
+
+.lt-ie9 .remodal-close:after {
+  margin: auto;
+  text-align: center;
+}
+
+.lt-ie9 .remodal-close:hover,
+.lt-ie9 .remodal-close:active {
+  background: transparent;
+}
+
+.lt-ie9 .remodal-close:hover.remodal-close:after,
+.lt-ie9 .remodal-close:active.remodal-close:after {
+  color: #3e5368;
+}
+
+/* Start of project
+   ========================================================================= */
 html {
   box-sizing: border-box;
   height: 100%;
@@ -461,6 +681,18 @@ body {
           align-items: center;
 }
 
+a,
+a:visited {
+  border-bottom: 1px solid rgba(0, 31, 63, 0.25);
+  color: #001F3F;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #004286;
+}
+
 input {
   border-radius: 0;
   -webkit-appearance: none;
@@ -479,6 +711,11 @@ select {
   -webkit-appearance: menulist-button;
 }
 
+select[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 body {
   color: #001F3F;
   font-family: "Montserrat", sans-serif;
@@ -489,7 +726,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#section--enter-a-url {
+.o-page-section--enter-a-url {
   height: 8.25rem;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
@@ -504,17 +741,17 @@ body {
           align-self: stretch;
 }
 @media (min-width: 30.1rem) {
-  #section--enter-a-url {
+  .o-page-section--enter-a-url {
     height: 5rem;
   }
 }
 @media (min-width: 50.1rem) {
-  #section--enter-a-url {
+  .o-page-section--enter-a-url {
     width: 60%;
   }
 }
 
-#section--website-preview {
+.o-page-section--website-preview {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
@@ -528,7 +765,7 @@ body {
           align-self: stretch;
 }
 @media (min-width: 50.1rem) {
-  #section--website-preview {
+  .o-page-section--website-preview {
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
         -ms-flex-order: 3;
@@ -536,7 +773,7 @@ body {
   }
 }
 
-#section--low-vision-condition {
+.o-page-section--low-vision-condition {
   height: 5rem;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
@@ -551,7 +788,7 @@ body {
           align-self: stretch;
 }
 @media (min-width: 50.1rem) {
-  #section--low-vision-condition {
+  .o-page-section--low-vision-condition {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
@@ -559,12 +796,93 @@ body {
   }
 }
 @media (min-width: 50.1rem) {
-  #section--low-vision-condition {
+  .o-page-section--low-vision-condition {
     position: relative;
     top: -5rem;
     left: 60%;
     width: 40%;
   }
+}
+
+.remodal .c-remodal--lede {
+  margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+  color: #001F3F;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: left;
+}
+@media (min-width: 30.1rem) {
+  .remodal .c-remodal--lede {
+    margin: 3rem 2.5rem 1.5rem 2.5rem;
+    font-size: 1.3rem;
+  }
+}
+.remodal p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  color: #808080;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+@media (min-width: 30.1rem) {
+  .remodal p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-size: 1rem;
+  }
+}
+.remodal .c-remodal--learn-more {
+  margin-top: 2.8rem;
+  margin-bottom: -0.3rem;
+  color: #001F3F;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 30.1rem) {
+  .remodal .c-remodal--learn-more {
+    font-size: 0.9rem;
+  }
+}
+.remodal .c-remodal--more-info {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.remodal .c-remodal--more-info-item {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.7rem;
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  color: #808080;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: background 200ms ease-in-out;
+          transition: background 200ms ease-in-out;
+}
+@media (min-width: 30.1rem) {
+  .remodal .c-remodal--more-info-item {
+    width: 50%;
+    float: left;
+  }
+  .remodal .c-remodal--more-info-item:last-of-type {
+    border-right: 1px solid #d9d9d9;
+  }
+}
+.remodal .c-remodal--more-info-item:last-of-type {
+  margin-top: -1px;
+}
+.remodal .c-remodal--more-info-item:hover, .remodal .c-remodal--more-info-item:focus {
+  background-color: #f7f7f7;
+}
+.remodal .c-remodal--more-info-item:active {
+  background-color: #808080;
+  color: #fff;
 }
 
 input[name="c-controls--url"] {
@@ -627,6 +945,8 @@ select[name="c-controls--condition"] {
   width: 100%;
   height: 2.1rem;
   border-color: #001F3F;
+  -webkit-transition: opacity 200ms 200ms ease-in-out;
+          transition: opacity 200ms 200ms ease-in-out;
 }
 @media (min-width: 50.1rem) {
   select[name="c-controls--condition"] {
@@ -634,7 +954,7 @@ select[name="c-controls--condition"] {
   }
 }
 
-.c-website-viewer--iframe {
+.c-website-viewer {
   height: calc(100% - 13.25rem);
   position: absolute;
   top: 8.25rem;
@@ -642,46 +962,66 @@ select[name="c-controls--condition"] {
   border: 0;
 }
 @media (min-width: 30.1rem) {
-  .c-website-viewer--iframe {
+  .c-website-viewer {
     height: calc(100% - 10rem);
     top: 5rem;
   }
 }
 @media (min-width: 50.1rem) {
-  .c-website-viewer--iframe {
+  .c-website-viewer {
     height: calc(100% - 5rem);
   }
 }
 
-.has-farsighted {
-  -webkit-filter: blur(6px);
+/* Low vision conditions
+   ========================================================================= */
+svg {
+  display: none;
+}
+
+.has-protanopia {
+  -webkit-filter: url(#has-protanopia);
+  -moz-filter: url(#has-protanopia);
+  -ms-filter: url(#has-protanopia);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='has-protanopia'><feColorMatrix type='matrix' values='0.56667 0.43333 0.00000 0 0 0.55833 0.44167 0.00000 0 0 0.00000 0.24167 0.75833 0 0 0 0 0 1 0'/></filter></svg>#has-protanopia");
+}
+
+.has-deuteranopia {
+  -webkit-filter: url(#has-deuteranopia);
+  -moz-filter: url(#has-deuteranopia);
+  -ms-filter: url(#has-deuteranopia);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='has-deuteranopia'><feColorMatrix type='matrix' values='0.4251 0.6934 -0.1147 0 0 0.3417 0.5882 0.0692 0 0 -0.0105 0.0234 0.9870 0 0 0 0 0 1 0'/></filter></svg>#has-deuteranopia");
+}
+
+.has-tritanopia {
+  -webkit-filter: url(#has-tritanopia);
+  -moz-filter: url(#has-tritanopia);
+  -ms-filter: url(#has-tritanopia);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='has-tritanopia'><feColorMatrix type='matrix' values='0.95000 0.05000 0.00000 0 0 0.00000 0.43333 0.56700 0 0 0.00000 0.47500 0.52500 0 0 0 0 0 1 0'/></filter></svg>#has-tritanopia");
 }
 
 .has-monochromacy {
-  -webkit-filter: grayscale(1);
+  -webkit-filter: url(#has-monochromacy);
+  -moz-filter: url(#has-monochromacy);
+  -ms-filter: url(#has-monochromacy);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='has-monochromacy'><feColorMatrix type='matrix' values='0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0 0 0 1 0'/></filter></svg>#has-monochromacy");
 }
 
-.has-macular-degeneration {
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(20%, black), color-stop(50%, rgba(255, 255, 255, 0)));
-  background: -webkit-radial-gradient(center, ellipse cover, black 20%, rgba(255, 255, 255, 0) 50%);
-  background: -webkit-radial-gradient(center, ellipse, black 20%, rgba(255, 255, 255, 0) 50%);
-  background: radial-gradient(ellipse at center, black 20%, rgba(255, 255, 255, 0) 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 );
+.has-cataracts {
+  -webkit-filter: brightness(1) blur(3px);
+  -moz-filter: brightness(1) blur(3px);
+  -ms-filter: brightness(1) blur(3px);
+  filter: brightness(1) blur(3px);
 }
 
-.has-hemianopia {
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(65%, black));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, black 65%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, black 65%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 );
-}
-
-.has-retinitis-pigmentosa {
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(65%, black));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, black 65%);
-  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0) 0%, black 65%);
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, black 65%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 );
+.has-hemianopia:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60%;
+  width: 60%;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEzOXB4IiBoZWlnaHQ9IjEzOXB4IiB2aWV3Qm94PSIwIDAgMTM5IDEzOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuMi4yICg5OTgzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT50ZXN0PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc2tldGNoOnR5cGU9Ik1TUGFnZSI+CiAgICAgICAgPHJlY3QgaWQ9InRlc3QiIGZpbGw9IiNEMDAxMUIiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxMzkiIGhlaWdodD0iMTM5Ij48L3JlY3Q+CiAgICA8L2c+Cjwvc3ZnPg==");
 }
 
 .js-form-error--label {
@@ -695,11 +1035,20 @@ select[name="c-controls--condition"] {
   -webkit-transition: color 100ms ease;
           transition: color 100ms ease;
 }
+.js-form-error--field:hover {
+  border-color: #ee0d00;
+}
 
 .js-form-error--button {
   background-color: #FF4136 !important;
   -webkit-transition: color 100ms ease;
           transition: color 100ms ease;
+}
+.js-form-error--button:hover, .js-form-error--button:focus {
+  background-color: #ca0b00 !important;
+}
+.js-form-error--button:active {
+  background-color: #830700 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

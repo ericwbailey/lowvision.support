@@ -11,7 +11,7 @@ input[name="c-controls--url"]
     {
         border-color: lighten($color-primary, 7%);
 
-        transition: background 200ms ease-in-out;
+        transition: background $transition-default;
     }
 
     &:active,
@@ -37,11 +37,12 @@ button[name="c-controls--submit"]
     float: right;
 
     background-color: $color-primary;
+
     border: 0;
 
     color: #fff;
 
-    transition: background 200ms ease-in-out;
+    transition: background $transition-default;
 
     &:hover,
     &:focus
@@ -77,6 +78,8 @@ select[name="c-controls--condition"]
     height: 2.1rem;
 
     border-color: $color-primary;
+
+    transition: opacity 200ms $transition-default;
 
     @include media(">50rem") {
         height: 2.75rem;

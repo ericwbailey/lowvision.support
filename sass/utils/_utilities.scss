@@ -1,9 +1,3 @@
-// Variables
-$color-primary: #001F3F;
-$color-secondary: #DDDDDD;
-$color-error: #FF4136;
-
-
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 %visuallyhidden
 {
@@ -29,6 +23,17 @@ $color-error: #FF4136;
     width: auto;
 }
 
+// Reverse the settings applied by `.visuallyhidden`
+@mixin visuallyshown
+{
+  clip: auto;
+  clip: rect(auto auto auto auto);
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
 
 // Clearfix
 %cf:before,
@@ -57,4 +62,11 @@ $color-error: #FF4136;
 %bottom-spacer--double
 {
     margin-bottom: 2rem;
+}
+
+
+// Renders a white background fallback for previewed sites
+%background-fallback
+{
+    background-color: white;
 }

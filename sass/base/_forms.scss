@@ -26,3 +26,10 @@ select
 {
     -webkit-appearance: menulist-button;
 }
+
+select[disabled]
+{
+    opacity: 0.3;
+
+    cursor: not-allowed;
+}

@@ -1,9 +1,11 @@
+// Utilities
+@import 'utils/variables';
+@import 'utils/utilities';
+
 // Vendors
 @import 'vendors/normalize';
 @import 'vendors/include-media';
-
-// Utilities
-@import 'utils/utilities';
+@import 'vendors/jquery.remodal';
 
 // Base
 @import 'base/core';
@@ -16,6 +18,7 @@
 @import 'layout/o-page-section';
 
 // Components
+@import 'components/c-remodal';
 @import 'components/c-controls';
 @import 'components/c-website-viewer';
 

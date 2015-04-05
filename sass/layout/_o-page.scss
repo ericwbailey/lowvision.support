@@ -1,6 +1,5 @@
-#section--enter-a-url
+.o-page-section--enter-a-url
 {
-//background-color: #FFC48D;
     height: 8.25rem;
 
     order: 1;
@@ -16,9 +15,8 @@
     }
 }
 
-#section--website-preview
+.o-page-section--website-preview
 {
-//background-color: wheat;
     order: 2;
     flex: 1 1 auto;
     align-self: stretch;
@@ -28,9 +26,8 @@
     }
 }
 
-#section--low-vision-condition
+.o-page-section--low-vision-condition
 {
-//background-color: #E8FF8C;
     height: 5rem;
 
     order: 3;

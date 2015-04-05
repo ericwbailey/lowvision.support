@@ -1,3 +1,6 @@
+/* Start of project
+   ========================================================================= */
+
 html
 {
     box-sizing: border-box;
@@ -29,4 +32,18 @@ body
     justify-content: center;
     align-content: stretch;
     align-items: center;
+}
+
+a,
+a:visited
+{
+    border-bottom: 1px solid transparentize($color-primary, 0.75);
+    color: $color-primary;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus
+{
+    color: lighten($color-primary, 14%);
 }
