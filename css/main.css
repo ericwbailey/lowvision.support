@@ -763,6 +763,8 @@ body {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
+  background: url(../img/icon-lowvision.svg) no-repeat center center;
+  background-size: 140px 140px;
 }
 @media (min-width: 50.1rem) {
   .o-page-section--website-preview {
@@ -770,6 +772,8 @@ body {
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
+    background-position: center 35%;
+    background-size: 280px 280px;
   }
 }
 

@@ -21,8 +21,14 @@
     flex: 1 1 auto;
     align-self: stretch;
 
+    background: url(../img/icon-lowvision.svg) no-repeat center center;
+    background-size: 140px 140px;
+
     @include media(">50rem") {
         order: 3;
+
+        background-position: center 35%;
+        background-size: 280px 280px;
     }
 }
 
