@@ -1,0 +1,177 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- content meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- title and description -->
+        <title>lowvision.support</title>
+        <meta name="description" content="Help improve your website's accessibility by simulating common low vision disorders and color-blindness.">
+
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#001f3f">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="theme-color" content="#001f3f">
+
+        <!-- fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- open graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://lowvision.support" />
+        <meta property="og:title" content="lowvision.support" />
+        <meta property="og:description" content="Help improve your website's accessibility by simulating common low vision disorders and color-blindness." />
+        <meta property="og:image" content="http://lowvision.support/img/og-image.png" />
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body class="remodal-bg">
+
+    <!-- start of svg filters -->
+    <svg>
+            <filter id="has-protanopia">
+                <feColorMatrix values="0.56667 0.43333 0.00000 0 0
+                                       0.55833 0.44167 0.00000 0 0
+                                       0.00000 0.24167 0.75833 0 0
+                                       0 0 0 1 0"></feColorMatrix>
+            </filter>
+            <filter id="has-deuteranopia">
+                <feColorMatrix values="0.4251 0.6934 -0.1147 0 0
+                                       0.3417 0.5882 0.0692 0 0
+                                       -0.0105 0.0234 0.9870 0 0
+                                       0 0 0 1 0"></feColorMatrix>
+            </filter>
+            <filter id="has-tritanopia">
+                <feColorMatrix values="0.95000 0.05000 0.00000 0 0
+                                       0.00000 0.83333 0.16700 0 0
+                                       0.00000 0.87500 0.12500 0 0
+                                       0 0 0 1 0"></feColorMatrix>
+            </filter>
+
+            <filter id="has-monochromacy">
+                <feColorMatrix values="0.33 0.33 0.33 0 0
+                                       0.33 0.33 0.33 0 0
+                                       0.33 0.33 0.33 0 0
+                                       0 0 0 1 0"></feColorMatrix>
+            </filter>
+        </svg>
+        <!-- end of svg filters -->
+
+        <h1 id="title--low-vision-simulator" class="o-page-title">
+            Low Vision Simulator
+        </h1>
+
+        <!-- start of #section~~instructions -->
+        <div id="section--instructions" class="remodal" data-remodal-id="modal">
+            <p class="c-remodal--lede">
+                Help improve your website's accessibility by simulating common low vision disorders and color-blindness.
+            </p>
+            <p>
+                Submit the <abbr title="Uniform Resource Locator">URL</abbr> of the website you would like to test, then use the dropdown to select your color-blindess or low vision disorder. The simulation may not always be perfect, but should be close enough for evaluation purposes.
+            </p>
+            <p>
+                Certain websites (<a rel="external" href="https://www.google.com/">Google</a>, <a rel="external" href="https://www.facebook.com/">Facebook</a>, <a rel="external" href="https://www.flickr.com/">Flickr</a>, etc.) do not allow embedding, so they will not be able to be evaluated. In order to retain interactivity with the submitted website, this simulator uses <abbr title="Scalable Vector Graphics">SVG</abbr> filter technology. Unfortunately, this means that only <a rel="external" href="http://caniuse.com/#feat=svg-filters">newer browsers</a> may be able to use this site effectively.
+            </p>
+            <p class="c-remodal--learn-more">
+                Learn More
+            </p>
+            <ul class="c-remodal--more-info">
+                <li>
+                    <a class="c-remodal--more-info-item" rel="external" href="http://webaim.org/articles/visual/lowvision">Low Vision</a>
+                </li>
+                <li>
+                    <a class="c-remodal--more-info-item" rel="external" href="http://webaim.org/articles/visual/colorblind">Color-blindness</a>
+                </li>
+            </ul>
+        </div>
+        <!-- end of #section~~instructions -->
+
+        <!-- start of #section~~enter-a-url -->
+        <section id="section--enter-a-url" class="o-page-section o-page-section--enter-a-url" role="region">
+            <h2 id="subtitle--enter-a-url" class="o-page-section--title">
+                Enter a URL
+            </h2>
+            <form id="c-controls" class="c-controls" name="c-controls" novalidate>
+                <fieldset name="c-controls--fieldset">
+                    <label class="c-controls--label" for="c-controls--url">Website URL</label>
+                    <input id="c-controls--url" name="c-controls--url" type="url" spellcheck="false" aria-required="true" placeholder="ex: a11yproject.com">
+                    <button name="c-controls--submit" type="submit">View</button>
+                </fieldset>
+            </form>
+        </section>
+        <!-- end of #section~~enter-a-url -->
+
+        <!-- start of #section~~low-vision-condition -->
+        <section id="section--low-vision-condition" class="o-page-section o-page-section--low-vision-condition" role="region">
+            <h2 id="subtitle--select-a-low-vision-condition" class="o-page-section--title">
+                Select a Low Vision condition
+            </h2>
+            <fieldset name="c-controls--fieldset">
+                <label class="c-controls--label" for="c-controls--condition" form="c-controls">Low vision condition</label>
+                <select id="c-controls--condition" name="c-controls--condition" form="c-controls" disabled>
+                    <option value="option-none" selected>None (normal vision)</option>
+                    <optgroup label="Vision Disorders">
+                        <option value="option-cataracts">Cataracts</option>
+                        <!--
+                        <option value="option-hemianopia">Hemianopia</option>
+                        <option value="option-glaucoma">Glaucoma</option>
+                        <option value="option-macular-degeneration">Macular Degeneration</option>
+                        <option value="option-retinitis-pigmentosa">Retinitis Pigmentosa</option>
+                        -->
+                    </optgroup>
+                    <optgroup label="Color-blindness">
+                        <option value="option-protanopia">Protanopia (red-green; no red cones)</option>
+                        <option value="option-deuteranopia">Deuteranopia (red-green; no green cones)</option>
+                        <option value="option-tritanopia">Tritanopia (blue-yellow; no blue cones)</option>
+                        <option value="option-monochromacy">Monochromacy (no cones)</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </section>
+        <!-- end of #section~~low-vision-condition -->
+
+        <!-- start of #section~~website-preview -->
+        <section id="section--website-preview" class="o-page-section o-page-section--website-preview" role="region">
+            <h2 id="subtitle--website-preview" class="o-page-section--title">
+                Website Preview
+            </h2>
+            <iframe
+                id="c-website-viewer"
+                class="c-website-viewer"
+                name="c-website-viewer"
+                src=""
+                seamless
+                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                aria-live="polite"
+            ></iframe>
+        </section>
+        <!-- end of #section~~website-preview -->
+
+        <!-- scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/is.min.js"></script>
+        <script src="js/jquery.remodal.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

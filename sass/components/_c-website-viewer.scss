@@ -1,0 +1,18 @@
+.c-website-viewer
+{
+    height: calc(100% - 13.25rem);      // Height of URL + condition boxes
+    position: absolute;
+      top: 8.25rem;                     // Height of URL box
+    width: 100%;
+
+    border: 0;
+
+    @include media(">30rem") {
+        height: calc(100% - 10rem);
+          top: 5rem;
+    }
+
+    @include media(">50rem") {
+        height: calc(100% - 5rem);
+    }
+}
