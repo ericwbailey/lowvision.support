@@ -22,7 +22,7 @@ This site uses [scottrabin](https://github.com/scottrabin)'s excellent [is.js li
 - [ ] Certain websites forbid embedding in an iFrame - this is by design and there's not much I can do about this one, unfortunately
 - [ ] iFrame device density issues (will sometimes load desktop site)
 - [ ] iFrame obscures low vision condition section on iPhone (possibly related to device density issues above)
-- [ ] Modal code triggers a couple of warnings in the Chrome accessibility audit
+- [ ] Site chokes on URLs containing a hash (`#`) symbol
 
 
 ## To Do
