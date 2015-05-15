@@ -1,4 +1,4 @@
-# [lowvision.support](http://://lowvision.support/)
+# [lowvision.support](http://lowvision.support/)
 Help improve your website's accessibility by simulating common low vision disorders and color-blindness.
 
 
@@ -23,6 +23,7 @@ This site uses [scottrabin](https://github.com/scottrabin)'s excellent [is.js li
 - [ ] iFrame device density issues (will sometimes load desktop site)
 - [ ] iFrame obscures low vision condition section on iPhone (possibly related to device density issues above)
 - [ ] Site chokes on URLs containing a hash (`#`) symbol
+- [ ] Fallback white iFrame background will sometimes not load
 
 
 ## To Do
@@ -34,7 +35,7 @@ This site uses [scottrabin](https://github.com/scottrabin)'s excellent [is.js li
 - [ ] Add instructions/explanation modal
 - [ ] Add support for multiple selections (i.e. cataracts w/Protanopia) using [Chosen](https://harvesthq.github.io/chosen/) 
 - [ ] More visually emphasized focus styles
-- [ ] Add Google Analytics
+- [x] Add Google Analytics
 
 
 ## Contributors
