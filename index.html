@@ -129,15 +129,13 @@
             <fieldset name="c-controls--fieldset">
                 <label class="c-controls--label" for="c-controls--condition" form="c-controls">Low vision condition</label>
                 <select id="c-controls--condition" name="c-controls--condition" form="c-controls" disabled>
-                    <option value="option-none" selected>None (normal vision)</option>
+                    <option value="option-none" selected>None (no low vision conditions)</option>
                     <optgroup label="Vision Disorders">
                         <option value="option-cataracts">Cataracts</option>
-                        <!--
-                        <option value="option-hemianopia">Hemianopia</option>
-                        <option value="option-glaucoma">Glaucoma</option>
-                        <option value="option-macular-degeneration">Macular Degeneration</option>
-                        <option value="option-retinitis-pigmentosa">Retinitis Pigmentosa</option>
-                        -->
+                        <option value="option-hemianopia" disabled>Hemianopia</option>
+                        <option value="option-glaucoma" disabled>Glaucoma (Coming soon)</option>
+                        <option value="option-macular-degeneration" disabled>Macular Degeneration (Coming soon)</option>
+                        <option value="option-retinitis-pigmentosa" disabled>Retinitis Pigmentosa (Coming soon)</option>
                     </optgroup>
                     <optgroup label="Color-blindness">
                         <option value="option-protanopia">Protanopia (red-green; no red cones)</option>
