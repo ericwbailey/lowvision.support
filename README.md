@@ -35,6 +35,7 @@ This site uses [scottrabin](https://github.com/scottrabin)'s excellent [is.js li
 - [ ] Add instructions/explanation modal
 - [ ] Add support for multiple selections (i.e. cataracts w/Protanopia) using [Chosen](https://harvesthq.github.io/chosen/) 
 - [ ] More visually emphasized focus styles
+- [ ] [Show error message for sites that don’t display due to X-Frame-Options header](https://twitter.com/simevidas/status/599045054704046081?cn=cmVwbHk%3D) (h/t Šime Vidas)
 - [x] Add Google Analytics
 
 
