@@ -25,6 +25,9 @@ function getUrl(event) {
         // Removes initial disabled state of the low vision condition select menu
         $('#c-controls--condition').removeAttr('disabled');
 
+        // Removes background image
+        $('#section--website-preview').removeClass('o-page-section--background');
+
         // Removes error state if valid URL is entered
         $('[for="c-controls--url"]').removeClass('js-form-error--label');
         $('#c-controls--url').removeClass('js-form-error--field');

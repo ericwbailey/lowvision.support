@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -149,7 +148,7 @@
         <!-- end of #section~~low-vision-condition -->
 
         <!-- start of #section~~website-preview -->
-        <section id="section--website-preview" class="o-page-section o-page-section--website-preview" role="region">
+        <section id="section--website-preview" class="o-page-section o-page-section--website-preview o-page-section--background" role="region">
             <h2 id="subtitle--website-preview" class="o-page-section--title">
                 Website Preview
             </h2>
@@ -170,6 +169,13 @@
         <script src="js/is.min.js"></script>
         <script src="js/jquery.remodal.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/min/svg4everybody-min.js"></script>
+        <script>svg4everybody();</script>
+        <script>
+          svg4everybody({
+            polyfill: true
+          });
+        </script>
 
         <!-- analytics -->
         <script>
