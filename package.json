@@ -1,7 +1,7 @@
 {
-  "name": "lowvision.support",
+  "name": "lowvision",
   "description": "Help improve your website's accessibility by simulating common low vision disorders and color-blindness.",
-  "homepage": "lowvision.support",
+  "homepage": "http://lowvision.support",
   "version": "0.0.1",
   "license": "MIT",
   "author": "Eric Bailey <eric.w.bailey@gmail.com> (http​:​//ericwbailey​.​design)",
