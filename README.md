@@ -1,8 +1,8 @@
 # ⚠ THIS REPO IS STILL ACTIVELY BEING WORKED ON. DO NOT USE IN A PRODUCTION ENVIRONMENT ⚠
 
-# $$projectFullTitle
+# lowvision.support
 
-$$projectFullDescription
+Help improve your website's accessibility by simulating common low vision disorders and color-blindness.
 
 ## Table of Contents
 
@@ -23,8 +23,8 @@ Provide code examples and explanations of how to get the project.
 
 Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
 
-Link to [`CONTRIBUTING.md`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/CONTRIBUTING.md), [`AUTHORS`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS), and update the contributors section in [`package.json`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/package.json).
+Link to [`CONTRIBUTING.md`](https://github.com/ericwbailey/lowvision.support/blob/master/CONTRIBUTING.md), [`AUTHORS`](https://github.com/ericwbailey/lowvision.support/blob/master/AUTHORS), and update the contributors section in [`package.json`](https://github.com/ericwbailey/lowvision.support/blob/master/package.json).
 
 ## License
 
-[$$projectLicense](https://raw.githubusercontent.com/$$githubAuthor/$$githubTitle/master/LICENSE).
+[MIT](https://raw.githubusercontent.com/ericwbailey/lowvision.support/master/LICENSE).
