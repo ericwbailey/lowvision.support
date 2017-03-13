@@ -39,5 +39,232 @@
 {{>meta/scripts/plugins}}
 {{>meta/analytics/google-analytics}}
 
+
+
+
+
 </body>
 </html>
+
+
+
+<header
+    id="header"
+    aria-labelledby="title-lowvision-support"
+    role="banner">
+
+    <h1 id="title-lowvision-support">
+        lowvision.support
+    </h1>
+    <p>
+        Help improve your website's accessibility by simulating common low vision disorders and color-blindness.
+    </p>
+    <a href="">
+        Learn more<span class="content-hide-visually"> about what Low Vision is</span>
+    </a>
+
+    <nav
+        id="nav"
+        aria-labelledby="title-load-a-website"
+        role="navigation">
+
+        <h2 id="title-load-a-website">
+            Load a website
+        </h2>
+
+        <label for="url">
+            Website <abbr>URL</abbr>
+            <input
+                id="url"
+                autocapitalize="off"
+                name="url"
+                placeholder="http://webaim.org/articles/visual/lowvision"
+                type="url">
+        </label>
+
+        <button name="button">
+            View <span class="content-hide-visually">URL</span>
+        </button>
+
+        <button name="button">
+            <span class="content-hide-visually">Apply </span>Conditions
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<main
+    id="main"
+    aria-labelledby="title-loaded-website"
+    role="main">
+
+    <h2 id="title-loaded-website">
+        Loaded website
+    </h2>
+
+    <iframe
+        id=""
+        class=""
+        name=""
+        src=""
+        seamless=""
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms">
+    </iframe>
+
+</main>
+
+
+<section
+    id="disorders"
+    aria-labelledby="title-add-disorders"
+    role="region">
+
+    <h2 id="title-add-disorders">
+        Add disorders
+    </h2>
+
+    <fieldset
+        id="color-deficiency"
+        aria-describedby="title-color-deficiency">
+
+        <legend id="title-color-deficiency">
+            Color Deficiency
+        </legend>
+
+        <button name="reset-color-deficiency">
+            Reset <span class="content-hide-visually">Color Deficiency</span>
+        </button>
+
+        <label for="color-deficiency">
+            <input id="protanopia" name="color-deficiency" type="radio">
+            Protanopia
+            <span>Red-green, no red cones</span>
+        </label>
+        <label for="color-deficiency">
+            <input id="deuteranopia" name="color-deficiency" type="radio">
+            Deuteranopia
+            <span>Red-green, no green cones</span>
+        </label>
+        <label for="color-deficiency">
+            <input id="tritanopia" name="color-deficiency" type="radio">
+            Tritanopia
+            <span>Blue-yellow, no blue cones</span>
+        </label>
+        <label for="color-deficiency">
+            <input id="monochromacy" name="color-deficiency" type="radio">
+            Monochromacy
+            <span>No cones</span>
+        </label>
+
+    </fieldset>
+
+
+    <fieldset
+        id="pervasive"
+        aria-describedby="title-pervasive">
+
+        <legend id="title-pervasive">
+            Pervasive
+        </legend>
+
+        <button name="reset-pervasive">
+            Reset <span class="content-hide-visually">Pervasive</span>
+        </button>
+
+        <label for="pervasive">
+            <input id="blur" name="pervasive" type="range" min="0" max="10" value="0">
+            Blur
+            <span>Low Acuity</span>
+        </label>
+        <label for="pervasive">
+            <input id="cataracts" name="pervasive" type="range" min="0" max="10" value="0">
+            Cataracts
+            <span></span>
+        </label>
+        <label for="pervasive">
+            <input id="contrast-loss" name="pervasive" type="range" min="0" max="10" value="0">
+            Contrast Loss
+            <span></span>
+        </label>
+        <label for="pervasive">
+            <input id="ghosting" name="pervasive" type="range" min="0" max="10" value="0">
+            Ghosting
+            <span></span>
+        </label>
+        <label for="pervasive">
+            <input id="glare" name="pervasive" type="range" min="0" max="10" value="0">
+            Glare
+            <span></span>
+        </label>
+        <label for="pervasive">
+            <input id="snow" name="pervasive" type="range" min="0" max="10" value="0">
+            Snow
+            <span></span>
+        </label>
+
+    </fieldset>
+
+
+
+    <fieldset
+        id="blocked-visual-field"
+        aria-describedby="title-blocked-visual-field">
+
+        <legend id="title-blocked-visual-field">
+            Blocked Visual Field
+        </legend>
+
+        <button name="reset-blocked-visual-field">
+            Reset <span class="content-hide-visually">Blocked Visual Field</span>
+        </button>
+
+        <label for="strength">
+            <input id="strength" name="strength" type="range" min="0" max="10" value="0">
+            Strength
+        </label>
+
+        <label for="blocked-visual-field">
+            <input id="central" name="blocked-visual-field" type="radio">
+            Central
+            <span>Macular Degeneration</span>
+        </label>
+        <label for="blocked-visual-field">
+            <input id="peripheral" name="blocked-visual-field" type="radio">
+            Peripheral
+            <span>Glaucoma</span>
+        </label>
+        <label for="blocked-visual-field">
+            <input id="corner" name="blocked-visual-field" type="radio">
+            Corner
+            <span>Retinal Detachment</span>
+        </label>
+        <label for="blocked-visual-field">
+            <input id="hemianopia" name="blocked-visual-field" type="radio">
+            Side
+            <span>Hemianopia</span>
+        </label>
+        <label for="blocked-visual-field">
+            <input id="large-spots" name="blocked-visual-field" type="radio">
+            Large Spots
+            <span>Diabetic Retinopathy</span>
+        </label>
+        <label for="blocked-visual-field">
+            <input id="floaters" name="blocked-visual-field" type="radio">
+            Floaters
+            <span>Foo bar</span>
+        </label>
+
+    </fieldset>
+
+    <button name="button">
+        Reset All
+    </button>
+
+    <button name="button">
+        Close
+    </button>
+
+</section>
