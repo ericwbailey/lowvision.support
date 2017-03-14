@@ -1,6 +1,6 @@
 # [lowvision.support](http://lowvision.support/)
 
-Help improve your website's accessibility by simulating common low vision disorders and color-blindness.
+Help improve your website's accessibility by simulating common low vision conditions and color-blindness.
 
 ## Table of Contents
 
