@@ -35,7 +35,7 @@
         a {
             @include typography-tracking(loosest);
 
-            font-size: ms(0.8, em);
+            font-size: ms(0.75, em);
             text-transform: uppercase;
         }
     }

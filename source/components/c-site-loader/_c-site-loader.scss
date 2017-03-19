@@ -6,7 +6,7 @@
 
 // Component Logic ------------------------------------------------------------
 @mixin c-site-loader-button() {
-    height: rem(50);
+    height: rem(58);
     padding-left: ms(1, rem);
     padding-right: ms(1, rem);
     position: relative;
@@ -28,7 +28,7 @@
         padding-left: ms(0.25, rem);
 
         color: c(type, light);
-        font-size: ms(0.65, em);
+        font-size: ms(0.6, em);
         text-transform: uppercase;
     }
 
@@ -56,7 +56,7 @@
         &--conditions {
             @include c-site-loader-button;
 
-            margin-left: ms(2, rem);
+            margin-left: ms(1.5, rem);
         }
     }
 }
