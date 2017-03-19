@@ -11,23 +11,23 @@
 
 
 @mixin buttons-color() {
-    background-color: c(button, base);
+    background-color: c(button-primary, base);
 
-    color: c(button, type);
+    color: c(button-primary, type);
 }
 
 
 @mixin button-states() {
     &:hover {
-        background-color: c(button, hover);
+        background-color: c(button-primary, hover);
     }
 
     &:active {
-        background-color: c(button, active);
+        background-color: c(button-primary, active);
     }
 
     &:focus {
-        background-color: c(button, focus);
+        background-color: c(button-primary, focus);
     }
 }
 
@@ -72,7 +72,7 @@ input[type="button"] {
         &:hover,
         &:active,
         &:focus {
-            background-color: c(button, base);
+            background-color: c(button-primary, base);
         }
     }
 
@@ -105,17 +105,17 @@ input[type="button"] {
     @include content-show-interaction(input);
     @include typography-align(center);
 
-    color: c(button, base);
+    color: c(button-primary, base);
 
     &:hover {
-        color: c(button, hover);
+        color: c(button-primary, hover);
     }
 
     &:focus {
-        color: c(button, focus);
+        color: c(button-primary, focus);
     }
 
     &:active {
-        color: c(button, active);
+        color: c(button-primary, active);
     }
 }

@@ -4,48 +4,25 @@
     aria-labelledby="title-lowvision-support"
     role="banner">
 
-    <h1 id="title-lowvision-support">
+    <h1
+        class="content-hide-visually"
+        id="title-lowvision-support">
         lowvision.support
     </h1>
-    <p>
-        Help improve your website's accessibility by simulating common low vision conditions and color-blindness.
-    </p>
-    <a href="">
-        Learn more<span class="content-hide-visually"> about what Low Vision is</span>
-    </a>
 
-    <nav
-        id="nav"
-        class="l-nav"
-        aria-labelledby="title-load-a-website"
-        role="navigation">
+    {{>layout/l-nav/l-nav}}
 
-        <h2 id="title-load-a-website">
-            Load a website
-        </h2>
-
-        <label for="url">
-            Website <abbr>URL</abbr>
-            <input
-                id="url"
-                autocapitalize="off"
-                name="url"
-                placeholder="http://webaim.org/articles/visual/lowvision"
-                type="url">
-        </label>
-
-        <button
-            class="c-button"
-            name="view-url">
-            View <span class="content-hide-visually">URL</span>
-        </button>
-
-        <button
-            class="c-button"
-            name="apply-conditions">
-            <span class="content-hide-visually">Apply </span>Conditions
-        </button>
-
-    </nav>
+    <div class="l-header__introduction">
+        <p>
+            Help improve your website's accessibility by simulating common low vision conditions and color-blindness.
+        </p>
+        <p>
+            <a
+                href="http://webaim.org/articles/visual/lowvision"
+                rel="extrnal noopener">
+                Learn more<span class="content-hide-visually"> about what Low Vision is</span>
+            </a>
+        </p>
+    </div>
 
 </header>

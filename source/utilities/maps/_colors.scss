@@ -40,43 +40,49 @@ $colors: (
     ),
 
 
-    // Links -------------------------------------------------------------------
-    link: (
-        base:    #0074d9,
-        hover:   #7fdbff,
-        focus:   #ff851b,
-        active:  #ff4136,
-        visited: #ae00ff,
-        busy:    #dddddd
+    // Backgrounds ------------------------------------------------------------
+    background: (
+        dark:  #333333,
+        light: #ffffff
     ),
 
 
-    // Headings ---------------------------------------------------------------
-    heading: (
-        base: #111111,
-        odd:  #9b9b9b,
-        even: #4a4a4a
+    // Type -------------------------------------------------------------------
+    type: (
+        dark:  #333333,
+        light: #ffffff
+    ),
+
+
+    // Links -------------------------------------------------------------------
+    link: (
+        base:    #00BFFF,
+        hover:   lighten(#00BFFF, 20%),
+        focus:   #f5ab35,
+        active:  #00BFFF,
+        visited: #00BFFF,
+        busy:    #00BFFF
     ),
 
 
     // Buttons ----------------------------------------------------------------
-    button: (
-        type:   #ffffff,
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+    button-primary: (
+        type:   #333333,
+        base:   #00BFFF,
+        hover:  lighten(#00BFFF, 20%),
+        focus:  #f5ab35,
+        active: darken(#00BFFF, 20%),
+        busy:   #a9a9a9
     ),
 
 
     // Forms ------------------------------------------------------------------
     form: (
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+        base:   #ffffff,
+        hover:  #ffffff,
+        focus:  #ffffff,
+        active: #ffffff,
+        busy:   #ffffff
     )
 
 

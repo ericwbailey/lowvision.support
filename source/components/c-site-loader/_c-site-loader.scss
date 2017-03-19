@@ -1,0 +1,62 @@
+// ============================================================================
+// Component
+// Site Loader
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+@mixin c-site-loader-button() {
+    height: rem(50);
+    padding-left: ms(1, rem);
+    padding-right: ms(1, rem);
+    position: relative;
+      top: rem(6);
+    width: auto;
+}
+
+
+// Component Styling ----------------------------------------------------------
+.c-site-loader {
+
+    &__lockup {
+        display: flex;
+    }
+
+    &__label {
+        @include typography-tracking(loose);
+
+        padding-left: ms(0.25, rem);
+
+        color: c(type, light);
+        font-size: ms(0.65, em);
+        text-transform: uppercase;
+    }
+
+    &__input {
+        @include typography-tracking(slight);
+
+        border-radius: $global-border-radius;
+
+        background-color: c(background, dark);
+
+        color: c(type, light);
+    }
+
+    &__button {
+        &--view {
+            @include c-site-loader-button;
+
+            left: rem(-4);
+
+            border-radius: 0 $global-border-radius $global-border-radius 0;
+
+            background-color: c(type, light);
+        }
+
+        &--conditions {
+            @include c-site-loader-button;
+
+            margin-left: ms(2, rem);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// ============================================================================
+// Layout
+// Header
+// ============================================================================
+
+
+// Layout Logic ---------------------------------------------------------------
+
+
+
+// Layout Styling -------------------------------------------------------------
+.l-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding: ms(1, rem);
+
+    background-color: c(background, dark);
+
+    color: c(type, light);
+
+    &__introduction {
+        max-width: ms(19, rem);
+        position: absolute;
+          bottom: 40%;
+
+        text-align: center;
+
+        p {
+            margin-bottom: ms(1, em);
+        }
+
+        a {
+            @include typography-tracking(loosest);
+
+            font-size: ms(0.8, em);
+            text-transform: uppercase;
+        }
+    }
+}

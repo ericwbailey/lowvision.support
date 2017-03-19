@@ -8,8 +8,6 @@
 // navigating between path-to-images
 // [3] Overrides smartphone text resizing algorithms:
 // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
-// [4] Triggers browser hyphenation based off of declared language:
-// http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
 html {
     @include typography-kerning();
     @include typography-ligatures-common();
@@ -22,34 +20,13 @@ html {
 
     background-color: c(base, background); // Set on `<html>` to keep the background color present if the browser bounces at a scrolling boundary
 
-    color: c(base, type);
+    color: c(type, dark);
     direction: $global-type-direction;
-    font-family: $font-family-primary-preload; // See Type Loading section below
+    font-family: $global-type-family;
     font-size: $global-type-size;
     font-weight: $global-type-weight;
     line-height: $global-type-line-height;
     text-size-adjust: 100%; // [3]
-
-    &:lang(en-US) {
-         @include typography-hyphenation(); // [4]
-    }
-}
-
-
-// Type loading
-// https://helpx.adobe.com/typekit/using/font-events.html
-.wf {
-    &-loading {
-
-    }
-
-    &-inactive {
-
-    }
-
-    &-active {
-        font-family: $global-type-family;
-    }
 }
 
 

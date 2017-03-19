@@ -19,14 +19,14 @@ $toggle-forms-custom-select: true;
 $forms-custom-select-dropdown-icon: $symbol-arrow-point-down;
 $forms-custom-select-dropdown-distance: ms(-1.2, em);
 $forms-custom-select-dropdown-inset: ms(0.5, em);
-$form-input-padding: ms(0.5, em);
+$form-input-padding: ms(0.5, em) ms(0.75, em);
 $form-label-distance: em(6);
 $form-single-line-input-height: ms(2, em);
 
 
 // Mixins
 @mixin form-border() {
-    border: border(thinnest) solid c(form, base);
+    border: border(thinner) solid c(form, base);
 }
 
 
@@ -36,7 +36,7 @@ $form-single-line-input-height: ms(2, em);
 
 
 @mixin form-placeholder() {
-    color: transparentize(c(base, type), 0.3);
+    color: transparentize(c(type, light), 0.35);
 }
 
 
