@@ -1,0 +1,141 @@
+// ============================================================================
+// Component
+// Input
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+$c-input-radio-size: 1em;
+$c-input-radio-outer-ring: 0 0 0 0.15em;
+
+@mixin c-input-range-track() {
+    @include component-size(rem(8), 100%, null);
+
+    background: c(form, track);
+}
+
+@mixin c-input-range-thumb() {
+    @include component-size(rem(35), rem(24), rem(-14)); // You need to specify a margin in Chrome, but in Firefox and IE it is automatic
+
+    background: c(form, base) url(components/c-input/background-grip.svg) no-repeat center center;
+    background-size: 45%;
+
+    -webkit-appearance: none;
+
+    &:active {
+background-color: tomato;
+transform: scale(1.2);
+    }
+}
+
+
+// Component Styling ----------------------------------------------------------
+.c-input {
+    margin-bottom: ms(1, rem);
+
+    // Contexts
+    .o-conditions__color-deficiency &,
+    .o-conditions__blocked-visual-field & {
+
+        @include mappy-bp(palm-large) {
+            width: 50%;
+        }
+    }
+
+    .o-conditions__pervasive & {
+        margin-bottom: ms(2, rem);
+    }
+
+    // States
+    // NOTE: Prevents UI glitches (flickering, etc.) by applying the state to the entire input area
+    &:hover {
+        // Radio inputs
+        .c-input__label--primary {
+            color: darken(c(form, label-primary), 10%);
+        }
+    }
+
+    &:active {
+        // Radio inputs
+        .c-input__radio + .c-input__label--primary::before {
+            background: darken(c(form, base), 10%);
+
+            border: 0.2em solid darken(c(background, light), 10%); // Inner ring
+            box-shadow: $c-input-radio-outer-ring darken(c(form, base), 10%); // Outer ring
+
+            color: darken(c(form, label-primary), 10%);
+        }
+    }
+
+    // Labels
+    &__label {
+        &--primary {
+            color: c(form, label-primary);
+        }
+
+        &--secondary {
+            display: block;
+            margin-left: rem(41);
+
+            color: c(form, label-secondary);
+            font-size: ms(0.65, em);
+        }
+    }
+
+    // Radio inputs
+    &__radio {
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+
+        border: 0;
+
+        & + .c-input__label--primary {
+            line-height: 1;
+        }
+
+        & + .c-input__label--primary::before {
+            @include component-size($c-input-radio-size, $c-input-radio-size, null);
+
+            content: "";
+
+            display: inline-block;
+            margin-right: em(5);
+            margin-left: 0.2em;
+            vertical-align: em(-4);
+
+            background-color: c(background, light);
+
+            border: 0.125em solid c(background, light); // Inner ring
+            border-radius: $c-input-radio-size;
+            box-shadow: $c-input-radio-outer-ring c(form, base); // Outer ring
+        }
+
+        &:checked + .c-input__label--primary::before {
+            background: c(form, base);
+        }
+    }
+
+    // Slider inputs
+    &__range {
+        &::-webkit-slider-runnable-track {
+            @include c-input-range-track;
+        }
+
+        &::-webkit-slider-thumb {
+            @include c-input-range-thumb;
+        }
+
+        &::-ms-fill-lower {
+background-color: c(form, track-filled);
+        }
+
+        &::-moz-range-progress {
+background-color: c(form, track-filled);
+        }
+    }
+}

@@ -1,53 +1,126 @@
-<fieldset
-    id="blocked-visual-field"
-    class="o-condition"
-    aria-describedby="title-blocked-visual-field">
+<section class="o-conditions o-conditions__blocked-visual-field">
+    <fieldset
+        id="blocked-visual-field"
+        class="o-conditions__fieldset"
+        aria-describedby="title-blocked-visual-field">
 
-    <legend id="title-blocked-visual-field">
-        Blocked Visual Field
-    </legend>
+        <legend
+            id="title-blocked-visual-field"
+            class="o-conditions__legend">
+            Blocked Visual Field
+        </legend>
 
-    <button
-        class="c-button c-button--secondary"
-        name="reset-blocked-visual-field">
-        Reset <span class="content-hide-visually">Blocked Visual Field</span>
-    </button>
+        <button
+            class="c-button c-button--secondary"
+            name="reset-blocked-visual-field">
+            Reset <span class="content-hide-visually">Blocked Visual Field</span>
+        </button>
 
-    <!-- Toggles -->
-    <label for="strength">
-        <input id="strength" name="strength" type="range" min="0" max="10" value="0">
-        Strength
-    </label>
+        <!-- Toggles -->
+        <div class="o-conditions__wrapper">
 
-    <label for="blocked-visual-field">
-        <input id="central" name="blocked-visual-field" type="radio">
-        Central
-        <span>Macular Degeneration</span>
-    </label>
-    <label for="blocked-visual-field">
-        <input id="peripheral" name="blocked-visual-field" type="radio">
-        Peripheral
-        <span>Glaucoma</span>
-    </label>
-    <label for="blocked-visual-field">
-        <input id="corner" name="blocked-visual-field" type="radio">
-        Corner
-        <span>Retinal Detachment</span>
-    </label>
-    <label for="blocked-visual-field">
-        <input id="hemianopia" name="blocked-visual-field" type="radio">
-        Side
-        <span>Hemianopia</span>
-    </label>
-    <label for="blocked-visual-field">
-        <input id="large-spots" name="blocked-visual-field" type="radio">
-        Large Spots
-        <span>Diabetic Retinopathy</span>
-    </label>
-    <label for="blocked-visual-field">
-        <input id="floaters" name="blocked-visual-field" type="radio">
-        Floaters
-        <span>Foo bar</span>
-    </label>
+            <label class="c-input">
+                <span class="c-input__label--primary">
+                    Strength
+                </span>
+                <input
+                    id="strength"
+                    class="c-input__range"
+                    min="0" max="10" value="0"
+                    name="blocked-visual-field"
+                    type="range" />
+            </label>
 
-</fieldset>
+            <label class="c-input">
+                <input
+                    id="central"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="central" />
+                <span class="c-input__label--primary">
+                    Central
+                    <span class="c-input__label--secondary">
+                        Macular Degeneration
+                    </span>
+                </span>
+            </label>
+
+            <label class="c-input">
+                <input
+                    id="peripheral"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="peripheral" />
+                <span class="c-input__label--primary">
+                    Peripheral
+                    <span class="c-input__label--secondary">
+                        Glaucoma
+                    </span>
+                </span>
+            </label>
+
+            <label class="c-input">
+                <input
+                    id="corner"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="corner" />
+                <span class="c-input__label--primary">
+                    Corner
+                    <span class="c-input__label--secondary">
+                        Retinal Detachment
+                    </span>
+                </span>
+            </label>
+
+            <label class="c-input">
+                <input
+                    id="hemianopia"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="hemianopia" />
+                <span class="c-input__label--primary">
+                    Side
+                    <span class="c-input__label--secondary">
+                        Hemianopia
+                    </span>
+                </span>
+            </label>
+
+            <label class="c-input">
+                <input
+                    id="large-spots"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="large-spots" />
+                <span class="c-input__label--primary">
+                    Large Spots
+                    <span class="c-input__label--secondary">
+                        Diabetic Retinopathy
+                    </span>
+                </span>
+            </label>
+
+            <label class="c-input">
+                <input
+                    id="floaters"
+                    class="c-input__radio"
+                    name="blocked-visual-field"
+                    type="radio"
+                    value="floaters" />
+                <span class="c-input__label--primary">
+                    Floaters
+                    <span class="c-input__label--secondary">
+                        Foo bar
+                    </span>
+                </span>
+            </label>
+
+        </div>
+    </fieldset>
+</section>

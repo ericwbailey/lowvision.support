@@ -1,0 +1,41 @@
+// ============================================================================
+// Object
+// Conditions
+// ============================================================================
+
+
+// Layout Logic ---------------------------------------------------------------
+$o-conditions-fieldset-spacing: 0 0 ms(1.25, rem) 0;
+
+
+// Layout Styling -------------------------------------------------------------
+.o-conditions {
+    margin: ms(1, rem);
+
+    &__fieldset {
+        margin: $o-conditions-fieldset-spacing;
+        padding: $o-conditions-fieldset-spacing;
+
+        border: none;
+
+        &:not(:last-of-type) {
+            border-bottom: border(thinnest) solid c(border, conditions);
+        }
+    }
+
+    &__legend {
+        @include typography-tracking(slight);
+
+        margin-bottom: ms(1, rem);
+
+        font-size: ms(0.65, em);
+        text-transform: uppercase;
+    }
+
+    &__wrapper {
+// background-color: cornsilk;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

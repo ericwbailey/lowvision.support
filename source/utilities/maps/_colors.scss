@@ -47,6 +47,12 @@ $colors: (
     ),
 
 
+    // Borders ----------------------------------------------------------------
+    border: (
+        conditions: #D9D9D9
+    ),
+
+
     // Type -------------------------------------------------------------------
     type: (
         dark:  #333333,
@@ -58,7 +64,7 @@ $colors: (
     link: (
         base:    #00BFFF,
         hover:   lighten(#00BFFF, 20%),
-        focus:   #f5ab35,
+        focus:   #E7903C,
         active:  #00BFFF,
         visited: #00BFFF,
         busy:    #00BFFF
@@ -70,19 +76,32 @@ $colors: (
         type:   #333333,
         base:   #00BFFF,
         hover:  lighten(#00BFFF, 20%),
-        focus:  #f5ab35,
+        focus:  #E7903C,
         active: darken(#00BFFF, 20%),
         busy:   #a9a9a9
+    ),
+
+    button-secondary: (
+        type:   #E7903C,
+        base:   transparent,
+        hover:  #E7903C,
+        focus:  #E7903C,
+        active: #E7903C,
+        busy:   #E7903C
     ),
 
 
     // Forms ------------------------------------------------------------------
     form: (
-        base:   #ffffff,
-        hover:  #ffffff,
-        focus:  #ffffff,
-        active: #ffffff,
-        busy:   #ffffff
+        base:            #2A7AB0,
+        hover:           lighten(#2A7AB0, 20%),
+        focus:           #E7903C,
+        active:          #333333,
+        busy:            #333333,
+        label-primary:   #2A7AB0,
+        label-secondary: #333333,
+        track:           #666666,
+        track-filled:    #E7903C
     )
 
 

@@ -35,11 +35,17 @@
     &__input {
         @include typography-tracking(slight);
 
+        border-color: c(type, light) !important; // NOTE: Overrides `_forms.scss` specificity
         border-radius: $global-border-radius;
 
         background-color: c(background, dark);
 
         color: c(type, light);
+
+        // States
+        &:focus {
+            outline: 0;
+        }
     }
 
     &__button {

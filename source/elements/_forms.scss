@@ -206,6 +206,26 @@ input {
     &[type="range"] {
         margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `$form-label-distance`
         margin-bottom: ms(0.5, em); // Gives range input a little breathing room
+
+        // Resets
+        // https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+        -webkit-appearance: none; // Hides the slider so that custom slider can be made
+        width: 100%; // Specific width is required for Firefox
+        background: transparent; // Otherwise white in Chrome
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+
+        &::-ms-track {
+            width: 100%;
+            cursor: pointer;
+
+            // Hides the slider so custom styles can be added
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
     }
 
     &[type="search"] {

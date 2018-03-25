@@ -1,0 +1,56 @@
+// ============================================================================
+// Component
+// Button
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-button {
+    &--secondary {
+        @include typography-tracking(slight);
+
+        height: ms(1, rem);
+        padding-left: ms(0.35, rem);
+        padding-right: ms(0.35, rem);
+        width: auto;
+
+        border-radius: 0;
+
+        background-color: c(button-secondary, base);
+
+        color: c(button-secondary, type);
+        font-size: ms(0.6, em);
+        text-transform: uppercase;
+
+        // States
+        &:hover {
+            background-color: c(button-secondary, base);
+
+            color: darken(c(button-secondary, type), 15%);
+        }
+
+        &:active {
+            margin-top: rem(1);
+        }
+
+        &:active,
+        &:focus {
+            background-color: c(button-secondary, base);
+
+            outline: none;
+
+            color: darken(c(button-secondary, type), 20%);
+        }
+
+        // Contexts
+        .o-conditions & {
+            float: right;
+            position: relative;
+              top: ms(-3);
+        }
+    }
+}

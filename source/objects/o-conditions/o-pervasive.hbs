@@ -1,48 +1,93 @@
-<fieldset
-    id="pervasive"
-    class="o-condition"
-    aria-describedby="title-pervasive">
+<section class="o-conditions o-conditions__pervasive">
+    <fieldset
+        id="pervasive"
+        class="o-conditions__fieldset"
+        aria-describedby="title-pervasive">
 
-    <legend id="title-pervasive">
-        Pervasive
-    </legend>
+        <legend
+            id="title-color-deficiency"
+            class="o-conditions__legend">
+            Pervasive
+        </legend>
 
-    <button
-        class="c-button c-button--secondary"
-        name="reset-pervasive">
-        Reset <span class="content-hide-visually">Pervasive</span>
-    </button>
+        <button
+            class="c-button c-button--secondary"
+            name="reset-color-deficiency">
+            Reset <span class="content-hide-visually">Pervasive</span>
+        </button>
 
-    <!-- Toggles -->
-    <label for="pervasive">
-        Blur
-        <span>Low Acuity</span>
-        <input id="blur" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
-    <label for="pervasive">
-        Cataracts
-        <span></span>
-        <input id="cataracts" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
-    <label for="pervasive">
-        Contrast Loss
-        <span></span>
-        <input id="contrast-loss" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
-    <label for="pervasive">
-        Ghosting
-        <span></span>
-        <input id="ghosting" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
-    <label for="pervasive">
-        Glare
-        <span></span>
-        <input id="glare" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
-    <label for="pervasive">
-        Snow
-        <span></span>
-        <input id="snow" name="pervasive" type="range" min="0" max="10" value="0">
-    </label>
+        <!-- Toggles -->
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Blur
+            </span>
+            <input
+                id="blur"
+                class="c-input__range"
+                min="0" max="10" value="0"
+                name="pervasive"
+                type="range" />
+        </label>
 
-</fieldset>
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Cataracts
+            </span>
+            <input
+                id="cataracts"
+                class="c-input__range"
+                min="0" max="10" value="0"
+                name="pervasive"
+                type="range" />
+        </label>
+
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Contrast Loss
+            </span>
+            <input
+                id="contrast-loss"
+                class="c-input__range"
+                max="10" value="0"
+                name="pervasive"
+                type="range" min="0" />
+        </label>
+
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Ghosting
+            </span>
+            <input
+                id="ghosting"
+                class="c-input__range"
+                min="0" max="10" value="0"
+                name="pervasive"
+                type="range" />
+        </label>
+
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Glare
+            </span>
+            <input
+                id="glare"
+                class="c-input__range"
+                min="0" max="10" value="0"
+                name="pervasive"
+                type="range" />
+        </label>
+
+        <label class="c-input">
+            <span class="c-input__label--primary">
+                Snow
+            </span>
+            <input
+                id="snow"
+                class="c-input__range"
+                min="0" max="10" value="0"
+                name="pervasive"
+                type="range" />
+        </label>
+
+    </fieldset>
+</section>
